@@ -5,11 +5,11 @@ class Tentgent < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/HiroLiang/tentserv-agent/releases/download/v0.3.1/tentgent-0.3.1-aarch64-apple-darwin.tar.gz"
-      sha256 "a142a2902cde788bddca77a9b30021b2f786332b02d6c241e0581ac9b5bbf7b4"
+      url "https://github.com/HiroLiang/tentserv-agent/releases/download/v0.3.2/tentgent-0.3.2-aarch64-apple-darwin.tar.gz"
+      sha256 "1d36e044a138feed3fd59ea15cb64d44801bf3acc366b258fca6c5ffc5cf9f65"
     else
-      url "https://github.com/HiroLiang/tentserv-agent/releases/download/v0.3.1/tentgent-0.3.1-x86_64-apple-darwin.tar.gz"
-      sha256 "984ab569c93b8f1e4fd398a4c039888c78ff3ed5301449726e076e1dee6f6ab8"
+      url "https://github.com/HiroLiang/tentserv-agent/releases/download/v0.3.2/tentgent-0.3.2-x86_64-apple-darwin.tar.gz"
+      sha256 "3aed8093c0c0da03dcfcfb1d4410cd4ad9152b75eb9b1a6128d4bf31a41dea4b"
     end
   end
 
@@ -26,7 +26,7 @@ class Tentgent < Formula
       Tentgent installs the CLI and packaged support files only.
       To prepare the managed Python runtime:
 
-        #{pkgshare}/scripts/bootstrap-python-env.sh --project #{pkgshare}/python
+        tentgent runtime bootstrap
 
       Then verify:
 

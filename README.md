@@ -23,13 +23,10 @@ The Homebrew formula installs the Tentgent CLI and packaged support files only.
 It does not download the managed Python runtime, download models, start daemon
 processes, or mutate `TENTGENT_HOME` during `brew install`.
 
-After installation, bootstrap the managed Python runtime with the packaged
-release script:
+After installation, bootstrap the managed Python runtime:
 
 ```bash
-"$(brew --prefix tentgent)/share/tentgent/scripts/bootstrap-python-env.sh" \
-  --project "$(brew --prefix tentgent)/share/tentgent/python"
-
+tentgent runtime bootstrap
 tentgent doctor
 ```
 
@@ -67,4 +64,3 @@ the relevant `TENTGENT_HOME` paths manually.
 - [Install Guide](https://github.com/HiroLiang/tentserv-agent/blob/main/docs/user/install.md)
 - [CLI Commands](https://github.com/HiroLiang/tentserv-agent/blob/main/docs/user/commands.md)
 - [Runtime Notes](https://github.com/HiroLiang/tentserv-agent/blob/main/docs/user/runtime.md)
-
