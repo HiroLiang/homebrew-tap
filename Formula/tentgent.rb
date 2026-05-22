@@ -5,11 +5,11 @@ class Tentgent < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/HiroLiang/tentserv-agent/releases/download/v0.3.3/tentgent-0.3.3-aarch64-apple-darwin.tar.gz"
-      sha256 "f9eb001c87656ae2d4f70391c8a0e39223919f587a811fabee7c9a0005895b85"
+      url "https://github.com/HiroLiang/tentserv-agent/releases/download/v0.4.1/tentgent-0.4.1-aarch64-apple-darwin.tar.gz"
+      sha256 "52fb0eb96430b3ec9a53014b2d7f2919df2b0be0c8658fa7c8e58c925a6cb1d9"
     else
-      url "https://github.com/HiroLiang/tentserv-agent/releases/download/v0.3.3/tentgent-0.3.3-x86_64-apple-darwin.tar.gz"
-      sha256 "9a05c88b1a1587c52c36438a02d3aa6f1a93b437829d2f802b4beaf51aebe743"
+      url "https://github.com/HiroLiang/tentserv-agent/releases/download/v0.4.1/tentgent-0.4.1-x86_64-apple-darwin.tar.gz"
+      sha256 "55137b31dea3a75978fcde8d5e3fabb4a2826833853ba5c0d6b3f171ee4cd0b4"
     end
   end
 
