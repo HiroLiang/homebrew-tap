@@ -15,6 +15,8 @@ class Tentgent < Formula
 
   def install
     bin.install "bin/tentgent"
+    pkgshare.install "share/tentgent/pyproject.toml"
+    pkgshare.install "share/tentgent/uv.lock"
     pkgshare.install "share/tentgent/python"
     pkgshare.install "share/tentgent/scripts"
     doc.install "README.md"
