@@ -1,15 +1,15 @@
 class Tentgent < Formula
-  desc "Local AI runtime, dataset, server, daemon, and TUI toolkit"
+  desc "Local AI runtime, model server, daemon, and cluster routing toolkit"
   homepage "https://github.com/HiroLiang/tentserv-agent"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/HiroLiang/tentserv-agent/releases/download/v1.0.1/tentgent-1.0.1-aarch64-apple-darwin.tar.gz"
-      sha256 "a24013b1a6dcbf9af84478589ff1ec6040e6e377fb4be1b811217dae59e283e9"
+      url "https://github.com/HiroLiang/tentserv-agent/releases/download/v1.1.0/tentgent-1.1.0-aarch64-apple-darwin.tar.gz"
+      sha256 "53fe85ab26e59757080ef44f69004466667f9ecd14dd61288a0e89b880739947"
     else
-      url "https://github.com/HiroLiang/tentserv-agent/releases/download/v1.0.1/tentgent-1.0.1-x86_64-apple-darwin.tar.gz"
-      sha256 "65a4659bd675b4a3896f476088c35dbe1ef0c2d73c25c84e32833fdab6bfccfd"
+      url "https://github.com/HiroLiang/tentserv-agent/releases/download/v1.1.0/tentgent-1.1.0-x86_64-apple-darwin.tar.gz"
+      sha256 "a4d08b0b4092936f409727fad586137b6f2d607757e7f1daee45ce050ebe8e7d"
     end
   end
 
