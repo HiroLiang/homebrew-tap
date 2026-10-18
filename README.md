@@ -41,8 +41,19 @@ brew update
 brew upgrade tentgent
 ```
 
-If a release changes Python dependencies, rerun the runtime bootstrap command
-after upgrading.
+Homebrew updates the CLI and packaged source; the managed Python environment
+must also be refreshed when runtime code or dependencies change. Stop affected
+workloads, rerun bootstrap with the same profile, and restart them. For local
+models:
+
+```bash
+tentgent runtime bootstrap --profile local-model
+```
+
+The replacement `1.1.2_1` Homebrew package fixes GGUF model selection when the
+source also contains a projector. The CLI version remains `1.1.2`; `brew list
+--versions tentgent` shows the package revision. Existing model downloads can
+be reused.
 
 ## Uninstall
 

@@ -2,14 +2,15 @@ class Tentgent < Formula
   desc "Local AI runtime, model server, daemon, and cluster routing toolkit"
   homepage "https://github.com/HiroLiang/tentserv-agent"
   license "Apache-2.0"
+  revision 1
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/HiroLiang/tentserv-agent/releases/download/v1.1.2/tentgent-1.1.2-aarch64-apple-darwin.tar.gz"
-      sha256 "956cbb7b277654385ad5dac8d5fd1dd4b16802c95caafb83ddf7827bd97908af"
+      url "https://github.com/HiroLiang/tentserv-agent/releases/download/v1.1.2/tentgent-1.1.2-aarch64-apple-darwin.tar.gz?revision=1"
+      sha256 "0704b9e9192a3f4eff057a281087c2e9571df1b50681e25fb6e9d15457043b51"
     else
-      url "https://github.com/HiroLiang/tentserv-agent/releases/download/v1.1.2/tentgent-1.1.2-x86_64-apple-darwin.tar.gz"
-      sha256 "74cb92ec07b1d412f7f894bf385e43d86874006048f4d60ca8bf419082d8614c"
+      url "https://github.com/HiroLiang/tentserv-agent/releases/download/v1.1.2/tentgent-1.1.2-x86_64-apple-darwin.tar.gz?revision=1"
+      sha256 "0f25a865e682009dc7a754afb7f615c338b16ae42868201ab087d6155e4d7554"
     end
   end
 
@@ -29,6 +30,13 @@ class Tentgent < Formula
       To prepare the managed Python runtime:
 
         tentgent runtime bootstrap
+
+      For local models, include the backend dependencies:
+
+        tentgent runtime bootstrap --profile local-model
+
+      After upgrading, stop affected workloads, repeat bootstrap with your
+      existing profile, and restart them to load the updated Python runtime.
 
       Then verify:
 
